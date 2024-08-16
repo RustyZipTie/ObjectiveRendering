@@ -28,6 +28,7 @@ This is an array of element objects. The element objects can be either DOM eleme
 | id | string | Corresponds to the HTML attribute `id` |
 | className | string | Corresponds to the HTML attribute `class` |
 | refName | string | Define this in order to get the element included in the references returned by `render()`. The name you give it will be the name you can use to access it later |
+| attributes | object | Use this to set any other html attrubutes. Use `{name: value}` format for any attrubute. For example: `{src: "htpps://www.website.com/image"}`|
 
 ### Examples
 #### Hello world

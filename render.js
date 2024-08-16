@@ -23,7 +23,8 @@ const render = (contents, parent, clear = true, documentCtx = document) => {
                 contentEditable,
                 id,
                 className,
-                refName
+                refName,
+                attributes
             } = elemObj
             if (type) {
                 const elem = documentCtx.createElement(type);
@@ -52,6 +53,10 @@ const render = (contents, parent, clear = true, documentCtx = document) => {
 
                 if (refName)
                     refs[refName] = elem
+
+                if (attributes)
+                    for(const [key, val] of Object.entries(attributes))
+                        elem[key] = val
 
                 elem.contentEditable = !!contentEditable;
                 parent.appendChild(elem);
