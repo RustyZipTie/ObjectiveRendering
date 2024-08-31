@@ -73,3 +73,5 @@ const render = (contents, parent, clear = true, documentCtx = document) => {
 if (typeof exports != 'undefined') {
     exports.render = render
 }
+
+export default render;
